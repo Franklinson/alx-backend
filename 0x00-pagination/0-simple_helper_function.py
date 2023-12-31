@@ -9,7 +9,8 @@ def index_range(page, page_size):
     - page_size (int): The number of items per page.
 
     Returns:
-    - tuple: A tuple containing the start index and end index for the specified page.
+    - tuple: A tuple containing the start index and end
+        index for the specified page.
     """
     if page <= 0 or page_size <= 0:
         raise ValueError("Page and page_size must be positive integers.")
