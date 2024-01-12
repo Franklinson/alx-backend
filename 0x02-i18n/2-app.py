@@ -15,7 +15,7 @@ class Config(object):
 
 # configuration
 app = Flask(__name__)
-app.config.from_object(Config)
+app.url_map.strict_slashes = False
 babel = Babel(app)
 
 
@@ -32,4 +32,5 @@ def hello():
 
 
 if __name__ == '__main__':
+    app.config.from_object(Config)
     app.run(port="5000", host="0.0.0.0", debug=True)
